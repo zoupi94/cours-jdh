@@ -1,0 +1,28 @@
+<html>
+<head>
+<title>javascript</title>
+<script language="javascript" type="text/javascript">
+function ecrit(txt)
+{
+     doc = document.getElementById("letexte") ;
+     doc.innerHTML = txt ;
+}
+function clic(quoi,event)
+{
+	if(navigator.appName == 'Netscape')
+	      balise = event.target;
+	else  balise = event.srcElement;
+	balise.style.backgroundColor = "red";
+     var txt = quoi + "<br />Position du clic donnée par "+ balise.id + " : " +
+event.clientX + ' - ' + event.clientY;
+     ecrit(txt);
+}
+</script>
+</head>
+<body onclick="clic('toto',event)">
+<div id="letexte" name="letexte" style="background-color:#FFCCCC;"></div>
+<div id="block" style="background-color:#FCBC8C;">
+ici du texte dans une balise
+</div>
+</body>
+</html>

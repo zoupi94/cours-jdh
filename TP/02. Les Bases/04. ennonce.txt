@@ -1,0 +1,42 @@
+A partir du projet BDPhilia créé dans la partie CSS, nous allons rendre le contenu
+plus dynamique. Pour cela, vous allez devoir rajouter les éléments suivants:
+- un fichier javascript pour générer l'habillage du site affiche.js. Vous le stockerez dans le répertoire lib, et l'appelerez depuis votre fichier index.htm
+- un fichier javascript pour gerer les menu. Vous le stockerez dans le répertoire lib, et l'appelerez depuis votre fichier index.htm
+
+Dans le fichier lib/affiche.js
+- créer un tableau "projet" avec 3 clefs décrivant les informations suivantes:
+	["nom"]    = "BDPhilia";
+	["auteur"] = "votre nom";
+	["copy"]   = "&copy; 2009 votre entreprise";
+- créer une fonction affichePageBandeauHaut() qui affiche le bandeau du haut (<div id="bandeau">)
+
+Dans le fichier index.htm, remplacez la balise <div id="bandeau"> par un appel à la fonction affichePageBandeauHaut() et testez votre affichage, rien ne doit avoir changé
+
+Dans le fichier lib/menu.js
+- créer un tableau "pagesDisponibles" avec les informations suivantes (titre court, page, titre long):
+	["Accueil","index.htm","Bienvenue sur "+projet["nom"]],
+	["Recherche","recherche.htm","Votre recherche de BD"],
+	["Commande","commande.htm","Votre panier"]
+- créer une fonction affichePageMenu() qui affiche le menu (<div id="menu">) comme précédement.
+	* Cette fonction accepte 1 argument, qui est le nom de la page selectionnée (ex: index.htm)
+	* utiliser les boucles pour créer les balises <li>
+	* utiliser une instruction de controle pour tester la page selectionnée et lui attribuer l'atttribut class="select"
+
+Dans le fichier index.htm, remplacez la balise <div id="menu"> par un appel à la fonction affichePageMenu("index.htm") et testez votre affichage, rien ne doit avoir changé
+
+Dans le fichier lib/affiche.js
+- créer une fonction affichePageTitre() qui affiche le titre (<div id="titre">) comme précédement.
+  Cette fonction accepte 1 argument, qui est le nom de la page selectionnée (ex: index.htm)
+  Elle récupère le titre de la page dans le tableau "pagesDisponibles".
+
+Dans le fichier index.htm, remplacez la balise <div id="titre"> par un appel à la fonction affichePageTitre("index.htm") et testez votre affichage, rien ne doit avoir changé
+
+Dans le fichier lib/affiche.js
+- créer une fonction affichePagePied() qui affiche le pied (<div id="pied">) comme précédement.
+  Elle récupère les information sur le nom de l'auteur et le copyright dans le tableau "projet".
+
+Dans le fichier index.htm, remplacez la balise <div id="pied"> par un appel à la fonction affichePageTitre("index.htm") et testez votre affichage, rien ne doit avoir changé
+
+Essayer de passer l'argument "recherche.htm" aux fonctions affichePageMenu() et affichePageTitre();
+votre contenu est dynamiquement généré par javascript.
+

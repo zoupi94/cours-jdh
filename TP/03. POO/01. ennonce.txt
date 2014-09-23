@@ -1,0 +1,39 @@
+A partir du projet BDPhilia créé dans la partie précédente, nous allons 
+petit à petit construire les objets javascripts qui nous seront utiles:
+
+- Copier le fichier toolkit.js (dans le dossier Materiel/) dans votre librairie et appelez là depuis
+  votre fichier index.htm
+  Pour tester si cela fonction, vous pouvez tester la ligne suivante:
+  		<script language="javascript" type="text/javascript">
+			document.write(print_r(pagesDisponibles));
+		</script>
+  dans votre #blockDroit
+ 
+- Copier le fichier index.htm et le renommer en recherche.htm
+	Personnaliser le contenu de cette page pour refleter les changements
+
+- Dans le répertoire lib, rajouter une nouvelle librairie que l'on nommera bd.js
+	Appeler cette librairie depuis votre page recherche.htm
+	
+- Dans la librairie bd.js vous aller devoir créer un objet ficheBd pouvant stocker les informations suivantes:
+	id		entier incrémenté
+	titre	
+	auteur
+	sortie	année de sortie
+	resume
+	prix	si non defini dans le constructeur, mettre a 0.00
+	stock	si non defini dans le constructeur, mettre a 0
+- Cet objet aura 3 methodes:
+	stocker(qte)	incrémente le stock de qte si fourni, de 1 sinon
+	destocker(qte)	décrémente le stock de qte si fourni, de 1 sinon
+	toString()		affiche une répésentation textuelle de l'objet
+	ex: "FICHE BD N°1 : Luky Luke";
+		"Auteur: Uderzo";
+		"Prix  : 15.25";
+		"Stock : 100";
+
+- Dans le fichier recherche.htm, essayez de créer une instance de ficheBd puis
+	- le destocker de 10 et afficher 
+	- restocker de 2 et afficher
+	- créer un second objet, avec la même quantité et le même prix que votre premier objet
+	

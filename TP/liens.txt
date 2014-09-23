@@ -1,0 +1,7 @@
+W3School références Javascript :	http://www.w3schools.com/js/default.asp
+W3School examples Javascript :		http://www.w3schools.com/js/js_examples.asp
+Framework AJAX :			http://script.aculo.us/
+Documentation de code : 		http://www.stack.nl/~dimitri/doxygen/
+Eclipse IDE (plugin pour le web)	http://download.eclipse.org/webtools/downloads/
+Eclipse IDE				http://download.eclipse.org/
+Debugueur coté navigateur		https://addons.mozilla.org/fr/firefox/addon/1843

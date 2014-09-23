@@ -1,0 +1,90 @@
+<html>
+<head>
+<title>formulaire</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" type="text/JavaScript">
+<!--
+var type_retour = "XML";
+var xmlhttp = null;
+function creer_obj_requete()
+{
+	var httprq =  new XMLHttpRequest();
+	if(httprq)
+		return httprq;
+	httprq =  new ActiveXObject('Msxml2.XMLHTTP');
+     	if(httprq)
+		return httprq;
+	httprq =  new ActiveXObject('Microsoft.XMLHTTP');
+     	if(httprq)
+		return httprq;
+        return false;
+}
+function appel(val,adr)
+{
+     xmlhttp.open("GET", adr, false); //ouverture asynchrone
+   //	xmlhttp.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
+     xmlhttp.send(null);
+     
+     /*xmlhttp.onreadystatechange = recup_result;
+}
+function recup_result()
+{*/
+     if (xmlhttp.readyState == 4) // 4 : état "complete"
+     {
+       
+	if (xmlhttp.status == 200) //200 : code HTTP pour OK
+       {
+
+    	     //Traitement de la réponse.
+             var xmlDoc ;
+             switch (type_retour)
+             {
+             case "XML" :
+                    xmlDoc = xmlhttp.responseXML;
+		affiche(xmlDoc);
+                    break ;
+             default:
+		document.getElementById("affiche").innerHTML = xmlhttp.responseText;
+                    break ;
+             }
+             
+       }
+     }
+}
+function affiche(xmlDoc)
+{
+     aff = xmlDoc.documentElement.childNodes;
+     aff_tab = "<table border=\"1\" cellspacing=\"0\" width=\"250\">";
+     for (i=0; i<aff.length; i++)
+     {
+     var mavar = aff[i].nodeName;
+     var maval = aff[i].childNodes[0].nodeValue
+     aff_tab += "<tr><td>" + mavar + "</td><td>" + maval + "</td></tr>";
+     }
+     aff_tab += "</table>";
+     document.getElementById("affiche").innerHTML = aff_tab;
+}
+function voir(type)
+{
+	type_retour = type;
+     //type_retour = "txt";
+     xmlhttp = creer_obj_requete();
+     if (type_retour == 'XML')
+     {
+          appel('','doc.xml');
+     }
+     else
+     {
+          appel('','doc.txt');
+     }
+}
+//-->
+</script>
+
+<div id="affiche" name="affiche" style="position:absolute; left:50px;top:100px; width:400px; height:200px;">
+&nbsp;</div>
+<input type="button" name="propriété" value="voir XML" onclick="voir('XML')" />
+<input type="button" name="propriété" value="voir TXT" onclick="voir()" />
+</body>
+</html>
+     

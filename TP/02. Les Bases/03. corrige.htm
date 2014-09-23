@@ -1,0 +1,21 @@
+<html>
+	<head>
+		<title>calcul ttc</title>
+		<script language="javascript" type="text/javascript">
+			function ttc (ht, taux)
+			{
+			     var resultat = ht * (1+ taux / 100);
+			     return(resultat);
+			}
+			
+			ht = 250;
+			tva = 19.6;
+			ttc = ttc(ht,tva);
+		</script>
+	</head>
+	<body>
+		<script language="javascript" type="text/javascript">
+		     document.write(ht+"&euro; hors taxe donnent avec une TVA de "+tva+"% "+ttc+" euros TTC.");
+		</script>
+	</body>
+</html>

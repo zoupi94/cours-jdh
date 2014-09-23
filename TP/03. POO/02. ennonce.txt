@@ -1,0 +1,37 @@
+Nous allons maintenant stocker nos différentes bd dans un objet de gestion des stocks:
+
+- Dans le fichier bd.js
+	- Créer une classe stockBd() dont le constructeur instancie 2 propriétés de tableau "stock" et "stockByKey"
+	- Créer une methode referencer(bd) qui vérifie que le paramètre soit un objet. Si c'est
+	  le cas, il ajoute une entrée dans la propiété stockByKey (clef = id de la bd, valeur = indice dans le tableau stock)
+	  on ajoute dans le tableau stock, l'objet ficheBd passé en paramètre
+	- Créer une methode ajouter(bd) qui accèpte les même paramètres que notre classe ficheBd
+	  cette fonction créer un objet ficheBd qu'elle ajoute dans l'arbre stock et stockByKey
+	- Créer les methode stocker() et destocker() qui prennent en premier paramêtre l'id de 
+	  la Bd à modifier, et en second paramètre, la quantité à modifier
+	- Enfin, créer une methode toString() permettant d'afficher un tableau de toutes les Bd en stock
+	  ce tableau sera en xhtml
+
+- Dans la page recherche.htm
+	- créer une instance de stock;
+	- utiliser les methodes de cette instance pour ajouter les Bd suivante:
+		id	titre								auteur			prix	stock	sortie
+		1	Lucky Luke -Ma Dalton				Morris/Goscinny	50		10		1971
+		2	Lucky Luke -Les Dalton se rachetent	Morris/Goscinny	75		15		1965
+		3	Lucky Luke - Le cuisinier français	Morris/Guylouis	20		50		2003
+		4	Astérix le gaulois					Uderzo/Goscinny	1000	1		1961
+		5	Astérix et les Goths				Uderzo/Goscinny	900		0		1963
+		6	Tanguy et Laverdure à L'ecole		Uderzo/Charlier	15		4		1996
+		7	Blueberry - La tribu fantome		Giraud/Charlier	5		2		1982
+		8	Largo Winch - La voie et la vertu	Van Hamme/Francq 25		50		2008
+	- utiliser les fonctions de stockage, destockage pour changer le contenu de votre stock avant
+	  son affichage
+	- Afficher votre tableau dans la balise #blockDroit
+
+
+- Retourner dans votre methode toString() de la classe stockBd pour appliquer un style css au tableau.
+	- vous devez alterner la couleur de fond du tableau
+	- Vous devez stocker la présentation de votre tableau uniquement en style css (pas de html)
+	
+	
+	

@@ -1,0 +1,16 @@
+Utilisation de l'objet Math pour afficher la valeur du stock pour chaque Bd
+
+- Dans le fichier bd.js, vous devez:
+	- copier la methode getPrix() de ficheBd et créer la methode displayPrix a partir de cette
+	  methode. displayPrix accepte 1 parametre de type Number. Ce chiffre doit êttre arrondi au centième
+	  on fait ensuite le traitement de la chaine de charactère pour afficher le chiffre sous la 
+	  forme 00,00 euro
+	- utiliser cette methode depuis la methode getPrix()
+	- Créer une fonction stockVal qui calcule la valeure du stock et l'affiche convenablement.
+	- Afficher un nouvelle colonne au tableau html générer par la methode toString() de l'objet stockBd
+	
+
+- Rajouter une ligne de total a la fin du tableau des bd, avec le nombre total de livre, et la valeure totale du stock
+	- Créer pour cela une methode displayTotalStockQte() et  displayTotalStockVal() qui calculent
+	  ces deux informations
+		  

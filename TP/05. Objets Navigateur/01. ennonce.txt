@@ -1,0 +1,9 @@
+Faire un champs de saisie (textarea) qui met à jour le texte d'un calque au fur et à mesure de la
+saisie.
+
+
+Pour cela, vous allez devoir utiliser les outils suivants:
+	- window.getSelection(), document.getSelection()ou  document.selection.createRange().text;
+	  selon le navigateur
+	- document.getElementById("voirtxt") pour la recherche de calque
+	- .innerHTML pour remplir le contenu d'une balise

@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+<head>
+<title>Exercices sur les effets Scriptaculous</title>
+<link href="tp.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+// <![CDATA[
+	
+	stateTrois = "block";
+	function actionUn() 
+	{
+		new Effect.Opacity('bloc1', {duration:2, fps:25, from:1.0, to:0.0,
+			afterFinish: function() {
+				$('bloc1').style.display = "none";
+			}			
+		});
+		
+	}
+
+	function actionDeux() {
+		new Effect.Pulsate('bloc2');
+
+	}
+
+	function actionTrois() {
+		if(stateTrois == "none") {
+			new Effect.Appear('bloc3', {duration:2, fps:25, from:0.0, to:1.0});
+			stateTrois = "block";
+		}
+		else {
+			new Effect.Puff('bloc3');
+			stateTrois = "none";
+		}
+
+
+	}
+
+
+
+	function populateHiddenVars() {
+		document.getElementById('categoriesListOrder').value = Sortable.serialize('categories');
+		return true;
+	}
+
+
+//]]>
+</script>
+<script type="text/javascript" src="scriptaculous/prototype.js"></script>
+<script type="text/javascript" src="scriptaculous/scriptaculous.js"></script>
+</head>
+<body>
+
+	<div class="bloc" id="bloc1">
+		<h3>Mon titre de premier block</h3>
+		<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed non risus. 
+		Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras 
+		elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. 
+		Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl 
+		sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, 
+		enim. Pellentesque congue. Ut in risus volutpat libero pharetra tempor. Cras vestibulum 
+		bibendum augue. Praesent egestas leo in pede. Praesent blandit odio eu enim. Pellentesque 
+		sed dui ut augue blandit sodales. Vestibulum ante ipsum primis in faucibus orci luctus 
+		</p>
+	</div>
+	<div class="bloc" id="bloc2">
+		<h3>Mon titre de second block</h3>
+		<p>Nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl 
+		sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, 
+		enim. Pellentesque congue. Ut in risus volutpat libero pharetra tempor. Cras vestibulum 
+		bibendum augue. Praesent egestas leo in pede. Praesent blandit odio eu enim. Pellentesque 
+		sed dui ut augue blandit sodales. Vestibulum ante ipsum primis in faucibus orci luctus 
+		</p>
+	</div>
+	<div class="bloc" id="bloc3">
+		<h3>Mon titre de troisième block</h3>
+		<p>Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras 
+		elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. 
+		Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl 
+		sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, 
+		enim. Pellentesque congue. Ut in risus volutpat libero pharetra tempor. Cras vestibulum 
+		bibendum augue. Praesent egestas leo in pede. Praesent blandit odio eu enim. Pellentesque 
+		sed dui ut augue blandit sodales. Vestibulum ante ipsum primis in faucibus orci luctus 
+		</p>
+	</div>
+	
+	<div id="footer">
+		<div>
+			<input type="button" name="bouton" value="Effet sur le premier block" onclick="javascript:actionUn()"/>
+			<input type="button" name="bouton" value="Effet sur le second block" onclick="javascript:actionDeux()"/>
+			<input type="button" name="bouton" value="Effet sur le troisième block" onclick="javascript:actionTrois()"/>
+		</div>
+	</div>
+
+
+	
+	<div class="bloc" id="bloc4">
+		<ul class="sortableList" id="categories">
+			<li id="item_1" style="position: relative;">Voiture</li>
+			<li id="item_2" style="position: relative;">Velo</li>
+			<li id="item_3" style="position: relative;">Avion</li>
+			<li id="item_4" style="position: relative;">Bateau</li>
+			<li id="item_5" style="position: relative;">Pedalo</li>
+			<li id="item_6" style="position: relative;">Pied</li>
+			<li id="item_7" style="position: relative;">Scooter</li>
+			<li id="item_8" style="position: relative;">Solex</li>
+		</ul>
+		<form id="sortableListForm" name="sortableListForm" onsubmit="populateHiddenVars();" method="POST" action="montraitement.php">
+			<br/>Ordre : <input type="text" size="30" id="categoriesListOrder" name="categoriesListOrder"/>
+			<br/>			<input type="hidden" value="true" name="sortableListsSubmitted"/>
+			<input type="button" onclick="populateHiddenVars();" class="button" value="Voir la liste serialisée"/><br/>
+			<input type="submit" class="button" value="Submit"/>
+		</form>
+		<script type="text/javascript">
+		// <![CDATA[
+			Sortable.create('categories',{tag:'li'});
+			// ]]>
+		</script>
+	</div>
+
+</body>
+</html>
+     

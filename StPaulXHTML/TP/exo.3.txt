@@ -1,0 +1,11 @@
+EXERCICES SUR LES TRI SCRIPTACULOUS
+
+
+* Dans la balise "bloc4" une liste de vehicule (ul, li)
+* a la suite, mettre un champ input, et 2 bouton
+* Utilisez les objet de type sortable pour trier l'ordre de la liste
+* Faire une fonction qui est appelée lors du clic sur le premier bouton, et qui récupère une 
+  liste serialize de l'ordre des rubriques
+* Enregister cette chaine dans un champs hidden
+
+

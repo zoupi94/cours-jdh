@@ -1,0 +1,8 @@
+Brève apparté sur les expression régulière : test de la syntaxe d'une IP:
+
+- Créer une page commande.htm et la modifier en conséquence. remplacer la librairie bd.js
+  par un appel à la librairie commande.js
+  faire un formulaire qui envoie une adresse IP à une fonction javascript verifieIp(), stockée dans commande.js, qui dira 
+  si l'adresse est valide ou pas. Il affichera sont résultat dans un second champs nommé result.
+  Le contenu du champ nommé "ip" du formulaire est récupéré avec document.forms[0].ip.value
+  

@@ -1,0 +1,34 @@
+<html>
+	<head>
+		<title>Recherche</title>
+		<script language="javascript" type="text/javascript" src="lib/toolkit.js">
+		</script>
+		<script language="javascript" type="text/javascript" src="lib/affiche.js">
+		</script>
+		<script language="javascript" type="text/javascript" src="lib/menu.js">
+		</script>
+		<script language="javascript" type="text/javascript" src="lib/commande.js">
+		</script>
+		<style type="text/css" media="screen">
+			@import url("lib/style.css");
+		</style>
+	</head>
+	<body>
+		<script language="javascript" type="text/javascript">
+			affichePageBandeauHaut();
+			affichePageMenu("commande.htm");
+			affichePageTitre("commande.htm");
+			affichePagePied();
+		</script>
+		<div id="blockDroit">
+			<form>
+				<input type="text" value="192.168.1.1" name="ip"/>
+				<input type="button" value="Tester" onclick="verifieIp()"/>
+				<input type="text" value="" name="result"/>
+			</form>
+			<script language="javascript" type="text/javascript">
+			verifieIp();
+			</script>
+		</div>
+	</body>
+</html>

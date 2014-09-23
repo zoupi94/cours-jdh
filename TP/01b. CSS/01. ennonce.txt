@@ -1,0 +1,11 @@
+Créer un espace projet nommé BDPhilia contenant:
+- une page d'accueil index.htm avec 
+	- Un titre de page (dans <head>)
+	- Un espace de declaration de style CSS
+	- Un titre de page (dans <body>)
+	- Un pied de page affichant un copyright, et le nom de l'auteur
+- Dans votre espace de déclaration CSS vous devrez
+	- pour le corps du document, definir la police par defaut a : Arial,"Verdana",Helvetica,Sans-Serif, taille : 1.1em et de couleur gris très foncé par defaut;
+	- Definir le titre de la page comme etant 3.5x supérieur à la taille normale, en gras italic, et de couleur gris clair
+	- Le pied de page devra se présenter sous forme d'un bandeau, sur fond gris, avec un texte écrit à 75% de la taille normale.
+	  Une bordure interne évitera de coller le texte au bord du bandeau

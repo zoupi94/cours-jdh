@@ -1,0 +1,6 @@
+Affichage des date
+
+- Dans le fichier commande.htm, faire apparaitre une étiquette "date de commande :"avec à la
+  suite, la date du jour, en français et complète (date + heure)
+
+- utilisez les différentes methodes de la class Date pour changer l'affichage de la date.

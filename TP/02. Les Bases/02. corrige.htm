@@ -1,0 +1,44 @@
+<html>
+	<head>
+		<title>calcul ttc</title>
+		<script language="javascript" type="text/javascript">
+			tab_pays = new Array(
+			["Allemagne",11],
+			["Belgique",12],
+			["Espagne",14],
+			["France",10],
+			["Italie",13],
+			["Angleterre",13]
+			);
+			coul = new Array("FFFFCC","CCFFFF");
+			aff_tab = aff_liste = "";
+			for (i = 0; i < tab_pays.length; i++) {
+			     aff_tab += "<tr bgcolor=\"#"+coul[i%2]+"\"><td>"+tab_pays[i][0]+"</td><td>"+tab_pays[i][1]+"</td></tr>" ;
+			     aff_liste += "<option value=\""+tab_pays[i][1]+"\">"+tab_pays[i][0]+"</option>";
+			}
+		</script>
+	</head>
+	<body>
+		<h1>Nos Frais de port</h1>
+		<table border="1" cellspacing="0">
+			<tr>
+				<th>Pays</th>
+				<th>Frais</th>
+			</tr>
+			<script language="javascript" type="text/javascript">
+			     document.write(aff_tab);
+			</script>
+		</table>
+		<h2>Choisissez votre pays</h2>
+		<form>
+			Pays :
+			<select name="fdp">
+				<option value="">Choisissez votre pays</option>
+				<script language="javascript" type="text/javascript">
+				     document.write(aff_liste);
+				</script>
+			</select>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" value="Pays" />
+		</form>
+	</body>
+</html>

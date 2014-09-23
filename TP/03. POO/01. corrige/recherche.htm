@@ -1,0 +1,36 @@
+<html>
+	<head>
+		<title>Recherche</title>
+		<script language="javascript" type="text/javascript" src="lib/toolkit.js">
+		</script>
+		<script language="javascript" type="text/javascript" src="lib/affiche.js">
+		</script>
+		<script language="javascript" type="text/javascript" src="lib/menu.js">
+		</script>
+		<script language="javascript" type="text/javascript" src="lib/bd.js">
+		</script>
+		<style type="text/css" media="screen">
+			@import url("lib/style.css");
+		</style>
+	</head>
+	<body>
+		<script language="javascript" type="text/javascript">
+			affichePageBandeauHaut();
+			affichePageMenu("recherche.htm");
+			affichePageTitre("recherche.htm");
+			affichePagePied();
+		</script>
+		<div id="blockDroit">
+			<script language="javascript" type="text/javascript">
+			bd1 = new ficheBd(1,'Luky Luke', 'Uderzo', '1989', 'exellent', 10.15, 100);
+			document.write(bd1);
+			bd1.destocker(10);
+			document.write(bd1);
+			bd1.stocker(1);
+			document.write(bd1);
+			bd2 = new ficheBd(2,'gaston lagaffe', 'Gosigny', '1997', 'le meilleur',bd1.prix,bd1.stock);
+			document.write(bd2);
+			</script>
+		</div>
+	</body>
+</html>

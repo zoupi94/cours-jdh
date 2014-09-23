@@ -1,0 +1,48 @@
+<html>
+<head>
+<script language="javascript" type="text/javascript">
+val = 5;
+function decompte()
+{
+if (val == 0)
+{
+lex = 250;
+ley = 150;
+this.close()
+}
+else
+{
+doc = document.getElementById("aff");
+doc.innerHTML = "<h1>" + val + " secondes</h1>";
+val--;
+}
+}
+function go()
+{
+doc = document.getElementById("aff");
+doc.innerHTML = "<h1>" + val + " secondes</h1>";
+val--;
+dec = setInterval('decompte()',1000);
+}
+function ferme()
+{
+this.opener.enfant_m_appelle("l'enfant est ferm&eacute;");
+}
+function appel()
+{
+clearInterval(dec);
+this.focus();
+doc = document.getElementById("aff");
+doc.innerHTML = "<h1>On m'appelle...</h1>";
+}
+</script>
+</head >
+<body onload="go()" onunload="ferme()">
+Je suis la fen&ecirc;tre enfant. Je me ferme dans
+<div name="aff" id="aff" ></div>
+<br /><br />
+<input type="button" value="Arr&ecirc;ter la fermeture"
+onclick="clearInterval(dec)" />
+</body>
+</html>
+

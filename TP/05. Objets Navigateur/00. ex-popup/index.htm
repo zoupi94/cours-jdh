@@ -1,0 +1,44 @@
+<html>
+<head>
+<title>objet window</title>
+<script language="javascript" type="text/javascript">
+function decompte(val)
+{
+if (val == 0)
+{
+lex = 250;
+ley = 150;
+fenetre = window.open("popup.htm", "popup", "location=no,menubar=no, resizable=no, scrollbar=no, status=no, toolbar=no, top=" + ley
++ ", left=" + lex + ", width=300, height=200");
+}
+else
+{
+doc = document.getElementById("leaff");
+doc.innerHTML = "<h1>" + val + "</h1>";
+val--;
+chrono = setTimeout("decompte(" + val + ")",1000)
+}
+}
+function enfant_m_appelle(quoi)
+{
+doc = document.getElementById("leaff");
+doc.innerHTML = "<h1>" + quoi + "</h1>";
+}
+function appel()
+{
+fenetre.appel();
+}
+</script>
+</head>
+<body >
+Lancement de la fen&ecirc;tre popup
+<input type="button" value="go" onclick="decompte(10)" />
+<div name="leaff" id="leaff" ></div>
+<br /><br />
+<input type="button" value="Arr&ecirc;ter le lancement"
+onclick="clearTimeout(chrono)" />
+<br /><br />
+<input type="button" value="appel &agrave; popup" onclick="appel()" /><br />
+</body>
+</html>
+

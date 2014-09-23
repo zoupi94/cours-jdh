@@ -1,0 +1,7 @@
+
+
+Créer un tableau pays indicé sur le code téléphonique
+(France 33, Belgique 32, Mexique 52, Japon 81)
+Créer un index variable i
+Demander l'affichage du 52 (Mexique).
+Afficher également le nombre d'entrée du tableau

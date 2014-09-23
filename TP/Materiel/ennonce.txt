@@ -1,0 +1,14 @@
+JQUERY
+
+
+* Créer un document html
+* Importer les librairies Jquery et JqueryUI depuis googleCode (http://code.google.com/intl/fr/apis/ajaxlibs/documentation). 
+  Ne pas oublier d'importer la feuille de style du thème de base de jquery (http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.2/themes/base/jquery-ui.css)
+* dans le corps du document, créer une div avec l'id demo
+
+Les effets:
+* créer un liens avec les classes "ui-state-default ui-corner-all" et un href=#. Mettre le texte "Faire apparaitre la boite de dialogue" dans le liens
+* créer une div avec l'id effectBox et un style css pour ne pas faire apparaitre cette div. A l'intérieur de cette div, mettre le texte que vous souhaitez
+* Ajouter un evement onclick sur le lien, et faire appel a la fonction jquery pour appliquer un effet sur la div précédement créée. ($('#effectBox').toggle('blind');)
+
+

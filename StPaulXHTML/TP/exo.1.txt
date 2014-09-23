@@ -1,0 +1,13 @@
+EXERCICES SUR LA LIBRAIRIE SCRIPTACULOUS
+
+
+* Inclure la librairie scriptaculous a notre page index.htm ainsi que sa dépendance prototype
+* Ajouter 3 balises contenant:
+	- un titre h3
+	- un paragraphe avec du texte
+* Dans la feuille de style CSS, definir le positionnement de ces éléments pour faire en sorte qu'ils
+  se présentent sous forme de carré, de 250px de large, les un à la suite des autres, sur une même ligne,
+  avec 3 couleurs de fond différentes. 
+* enfin, créer un 4eme block avec un id egal a "footer" et definir en css sa position, comme etant, en bas, sur 
+  toute la largeur, et de 40px de haut. Il est au dessus de tout les éléments et doit s'agrandir s'il contient
+  trop d'information (en option, lui faire un couleur avec gestion du canal alpha)

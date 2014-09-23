@@ -1,0 +1,11 @@
+Si on découpe une séquence de drag and drop on a:
+Le drag and drop commence lors de l'événement mousedown
+Le déplacement de l'objet suit la position de la souris lors de l'événement mousemove
+Le drag and drop se termine lors de l'événement mouseup
+Pour gérer les événements on place des gestionnaires d'événements au niveau du document (page
+HTML) et on identifie l'objet à déplacer via son id.
+On récupère la position du clic et la position de l'objet au départ du drag and drop ( mousedown)
+On met une variable isdrag à true. Elle restera à true jusqu'à la fin (mouseup)
+A chaque déplacement de la souris on récupère la position de la souris et on recalcule la position de
+l'objet posObjet = posObjetDepart + (posSouris - posSourisDepart)
+On repositionne l'objet via son style.left et style.top

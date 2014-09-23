@@ -1,0 +1,10 @@
+
+
+- Créer une variable tableau de frais de port par pays, sous la forme:
+tab_pays[0]= ["Allemagne",11] ;
+tab_pays[1]= ["France",10] ;
+etc.
+- Créer une boucle de présentation sous forme de tableau HTML, avec une colonne "pays" et une
+colonne "Frais".
+- Créer la liste déroulante correspondante.
+- Alterner les couleurs de lignes (bgcolor de la balise tr)

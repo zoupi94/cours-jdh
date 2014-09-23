@@ -1,0 +1,43 @@
+A partir du fichier index.htm précédement crée, et avec l'aide des commandes CSS que nous venons de voir, 
+nous allons créer notre page d'accueil, qui nous servira de gabarit pour nos prochaines pages.
+Notre page devra resembler à ce que vous voyez sur l'écran du formateur.
+
+Pour ce faire, vous devez réaliser les opérations suivantes:
+
+Dans le fichier html:
+	- mettre les styles CSS dans une feuille externe (lib/style.css à créer)
+	- Englober le titre <h1> dans une balise de division portant l'id "titre"
+	- Englober le contenu du pied <div id="pied"> dans une balise de division inline (<span>)
+	- Rajouter une balise de division avec comme id menu. La positionner au dessus du block de titre
+	- A l'interieur de cette balise, mettre une liste (<ul>) de liens (<a>) renvoyant vers les pages :
+		* index.htm
+		* recherche.htm
+		* commande.htm
+	- mettre l'attribut class="select" sur la balise <li> contenant le lien vers index.htm
+	- Ajouter une balise de division avec l'identifiant bandeau avant la balise de menu (<div id="menu">). Cette balise doit contenir une entité exprimant un caractère d'espace.
+	- Ajouter une balise de division avec l'identifiant blockDroit. Remplir cette balise avec les paragraphes suivants:
+		* Ce site vous permet de consulter et commander parmis un stock de Bandes dessinnées disponibles.
+		* La rubrique recherche vous permet de consulter le catalogue des bandes dessinées disponibles.
+		* En vous rendant dans notre espace commande vous pourrez enregistrer votre selection dans un pannier d'achat.
+Récupérer l'image head.pjg situé dans le répertoire TP/Materiel et la mettre dans votre répertoire de travail (sous-répertoire img à créer)
+Dans le fichier lib/style.css, mettre en place les styles suivants:
+	- La police par defaut de la page doit etre Arial,"Verdana",Helvetica,Sans-Serif, en taille normale (1em) et de couleur #628
+	- Aucune marge ou espacement ne doit etre appliqué au corps du document (body)
+	- Tout les liens sont de couleur #84a et sans soulignement
+	- l'élément #bandeau doit etre positionné de manière absolue, en haut, a gauche. 
+	  Il a une taille de 92px de haut, 100% de large, et une couleur de fond de #f0f0f0 avec l'image "img/head.jpg" à gauche, non répétée;
+	- La balise #menu positionnée de manière absolue, a gauche et en dessous du #bandeau (top:90px), et prenant toute la largeur
+	  Sa couleur de fond est le violet #628
+	- La liste des menus est sur une seule ligne, et commence à 10% de la gauche
+	  les liens sont en blanc. Ils apparaissent en violet sur fond gris clair (identique au titre), lors d'un survol ou de la selection (class="select")
+	  Prévoir un petit espacement de 0.5em à gauche et a droite des balises <li> 
+	- La balise #titre positionnée de manière absolue, juste en dessous du menu (top: 109px), avec 100% de largeur et une hauteur de 60px.
+	  en cas de depassement de contenu, le surplus doit être caché. La couleur de fond est le gris clair (#ddd)
+	- le titre contenu dans l'enveloppe #titre (<h1>) est aligné sur la droite.
+	  Il est écrit avec une police Helvetica, de 350%, bold italic, et de couleur #628.
+	- La balise #blockDroit positionnée de manière absolue, à 170 pixels du haut, 10% sur le coté, alignée sur le bas et la droite de la page
+	- L'élément #pied positionné, en bas, à gauche, d'une largeur de 100% avec un espacement en haut et en bas de 0.25em
+	  La couleur de fond est le #eee et la taille de police de 0.75em
+	  une bordure, en haut uniquement de 2px violet (#628) vient fermer le block
+	- Une marge de 10% est appliqué sur l'élément <span> contenu dans le pied, afin de respecter
+	

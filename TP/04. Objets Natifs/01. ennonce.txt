@@ -1,0 +1,13 @@
+Nous allons maintenant améliorer l'affichage de notre tableau des BD:
+
+- Dans ficheBd créer une methode getAuteur qui nous retourne le nom de l'auteur. 
+  Si le nom de l'auteur contient au moin un charactère "/" on transforme le texte en tableau.
+  on boucle dessus pour rajouter après chaque auteur une balise d'espace (<br/>)
+  avant de retourner le resultat on supprime la dernière balise <br/> pour eviter le retour à la ligne de trop
+- Utiliser cette fonction pour l'affichage de l'objet ficheBd et stockBd (methode toString())
+  
+- Toujours dans ficheBd, créer une methode getPrix() nous retournant le prix de 
+  notre Bd dans un format français. Si le prix contient des centimes, remplacer le "." par une
+  virgule. Si c'est un entier, rajouter ",00"
+  Enfin, rajouter le symbole euro à la suite de notre prix et le retourner 
+- Utiliser cette fonction pour l'affichage de l'objet ficheBd et stockBd (methode toString())
