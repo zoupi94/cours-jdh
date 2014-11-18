@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Exercice 2</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <script language="javascript" type="text/javascript">
+            tableau_pays = new Array(
+            new Array("France",10),
+            new Array("Allemagne",11),
+            new Array("Belgique",12),
+            new Array("Italie",13),
+            new Array("Espagne",14)
+            ) ;
+            var tab_html="<table><tr><th>Pays</th><th>Code</th></tr>" ;
+            var list_deroul = '<form><select>';
+            list_deroul += "<option>" + "Choisir votre pays" ;
+            coul = new Array("FFFFCC","CCFFFF");
+
+            for (i=0; i<tableau_pays.length; i++){
+            tab_html += "<tr bgcolor=\"#"+coul[i%2]+"\">" + "<td>" + tableau_pays[i][0] + "</td>" + 
+            "<td>" + tableau_pays[i][1] + "</td>" + "</td>" + "</tr>"  ;
+
+            list_deroul += "<option>" + tableau_pays[i][0] ;
+
+            }
+            tab_html += "</table>" ;
+            list_deroul += "</select></form>";
+            document.write(tab_html);
+            document.write(list_deroul);
+
+            function calculprix (prixht, taux)
+            {
+                total = prixht * taux ;
+                return(total) ;
+            }
+            
+            calculprix = calculprix(50,0.5);
+            
+        </script>
+    </head>
+    <body>
+         <script language="javascript" type="text/javascript">
+        document.write("</br>" + "Pour un prix HT de 50, avec une tva de 5,5, le prix TTC est de : " + calculprix);
+        </script>
+    </body>
+</html>
